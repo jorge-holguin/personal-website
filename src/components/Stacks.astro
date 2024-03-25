@@ -5,47 +5,170 @@ import CSS from './icons/Css.astro';
 import Javascript from './icons/Javascript.astro';
 import React from './icons/React.astro';
 import MySQL from './icons/MySQL.astro';
+import Node from './icons/Node.astro';
+import Express from './icons/Express.astro';
+import Nextjs from './icons/NextJS.astro';
+import Python from './icons/Python.astro';
+import MongoDB from './icons/MongoDB.astro';
+import Unity from './icons/Unity_icon.astro';
+import Csharp from './icons/Csharp.astro';
+import NET from './icons/Net.astro';
+import SQLServer from './icons/SQLServer.astro';
+import Github from './icons/GitHub_icon.astro';
+import Docker from './icons/Docker.astro';
+import Azure from './icons/Azure.astro';
+import Scala from './icons/Scala.astro';
+import Tailwind from './icons/Tailwind.astro';
+import Notion from './icons/Notion.astro';
+import Linux from './icons/Linux.astro';
+import Scikit from './icons/Scikit.astro';
+import Numpy from './icons/Numpy.astro';
+import Wordpress from './icons/Wordpress.astro'
 
 // Prepara un arreglo con los componentes de íconos específicos y sus colores de brillo
-const iconComponents = [
-  { component: HTML, glowColor: 'rgba(255, 165, 0, 0.6)' }, // Resplandor naranja para HTML
-  { component: CSS, glowColor: 'rgba(0, 0, 255, 0.6)' },    // Resplandor azul para CSS
-  { component: Javascript, glowColor: 'rgba(255, 255, 0, 0.6)' }, // Resplandor amarillo para JavaScript
-  { component: React, glowColor: 'rgba(97, 218, 251, 0.6)' }, // Resplandor para React, ajusta el color como necesites
-  { component: MySQL, glowColor: 'rgba(0, 102, 204, 0.6)' }, // Resplandor para MySQL, ajusta el color como necesites
-];
+// Prepara un arreglo con los componentes de íconos específicos y sus colores de brillo
+const categories = {
+  frontEnd: [
+    { component: HTML, glowColor: 'rgba(255, 165, 0, 0.6)' },
+    { component: CSS, glowColor: 'rgba(0, 0, 255, 0.6)' },
+    { component: Tailwind, glowColor: 'rgba(56, 189, 248, 0.6)' }, // Resplandor azul para Tailwind CSS
+    { component: Javascript, glowColor: 'rgba(255, 255, 0, 0.6)' },
+    { component: React, glowColor: 'rgba(97, 218, 251, 0.6)' }, // Resplandor cian para React
+    // Agrega el resto de componentes de Full Stack
+  ],
+
+  backEnd: [
+  { component: Node, glowColor: 'rgba(128, 128, 128, 0.6)' }, // Resplandor gris para Node.js
+  { component: Express, glowColor: 'rgba(255, 175, 180, 0.6)' }, // Resplandor verde para Express
+  { component: Nextjs, glowColor: 'rgba(155, 87, 34, 0.6)' }, // Resplandor naranja rojizo para Next.js
+  { component: Csharp, glowColor: 'rgba(104, 33, 122, 0.6)' }, // Resplandor para C#
+  { component: NET, glowColor: 'rgba(251, 231, 215, 0.6)' }, // Resplandor para .NET
+  
+    // Agrega el resto de componentes de Full Stack
+  ],
+  baseDeDatos: [
+    { component: MySQL, glowColor: 'rgba(0, 102, 204, 0.6)' },
+    { component: MongoDB, glowColor: 'rgba(76, 175, 80, 0.6)' },
+    { component: SQLServer, glowColor: 'rgba(255, 0, 0, 0.6)' }, // Resplandor rojo para SQL Server
+    // Agrega el resto de componentes de Base de Datos
+  ],
+  nube: [
+  { component: Azure, glowColor: 'rgba(0, 150, 255, 0.6)' },
+    // Agrega el resto de componentes de Nube
+  ],
+  bigData: [
+    { component: Scala, glowColor: 'rgba(196, 0, 0, 0.6)' },
+    { component: Python, glowColor: 'rgba(215, 215, 0, 0.6)' }, // Resplandor azul para Python
+    { component: Numpy, glowColor: 'rgba(0, 180, 255, 0.6)' } // Resplandor amarillo para Numpy
+
+    // Agrega más componentes de Big Data si los tienes
+  ],
+  
+  utilitarios: [
+  { component: Notion, glowColor: 'rgba(150, 150, 150, 0.6)' }, // Resplandor naranja para Notion
+  { component: Docker, glowColor: 'rgba(0, 191, 255, 0.6)' }, // Resplandor azul claro para Docker
+  { component: Unity, glowColor: 'rgba(255, 165, 0, 0.6)' }, // Dorado
+  { component: Github, glowColor: 'rgba(150, 150, 150, 0.6)' }, // Resplandor gris oscuro para GitHub
+  { component: Linux, glowColor: 'rgba(215, 185, 50, 0.6)' }, // Dorado
+  { component: Wordpress, glowColor: 'rgba(0, 120, 215, 0.6)' } // Dorado
+  ],
+  // Añade más categorías si es necesario
+};
 ---
 
 
-<div class="icon-row">
-    {iconComponents.map((icon, index) => (
-      <div key={index} class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+<div>
+  <h2>Front-end</h2>
+  <div class="icon-row">
+    {categories.frontEnd.map((icon) => (
+      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+        {/* Asegúrate de que el componente del ícono sea renderizado correctamente */}
         <icon.component class="icon" />
       </div>
     ))}
   </div>
-  
-  <style>
-  .icon-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100px; /* O el alto que prefieras para tu fila de iconos */
-  }
-  
+
+  <h2>Back-end</h2>
+  <div class="icon-row">
+    {categories.backEnd.map((icon) => (
+      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+        <icon.component class="icon" />
+      </div>
+    ))}
+  </div>
+
+  <h2>Base de Datos</h2>
+  <div class="icon-row">
+    {categories.baseDeDatos.map((icon) => (
+      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+        <icon.component class="icon" />
+      </div>
+    ))}
+  </div>
+
+  <h2>Big Data</h2>
+  <div class="icon-row">
+    {categories.bigData.map((icon) => (
+      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+        <icon.component class="icon" />
+      </div>
+    ))}
+  </div>
+
+  <h2>Nube</h2>
+  <div class="icon-row">
+    {categories.nube.map((icon) => (
+      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+        <icon.component class="icon" />
+      </div>
+    ))}
+  </div>
+
+  <h2>Utilitarios</h2>
+  <div class="icon-row">
+    {categories.utilitarios.map((icon) => (
+      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+        <icon.component class="icon" />
+      </div>
+    ))}
+  </div>
+
+<style>
+.icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px; /* o el tamaño que prefieras */
+  height: 80px;
+  margin: 20px; /* Espacio entre íconos */
+}
+
+.icon {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Mantiene la proporción del ícono */
+}
+
+
+/* Media query para pantallas más pequeñas, como teléfonos móviles */
+@media (max-width: 600px) {
   .icon-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Esto asegura que cada icono tenga la misma anchura */
-    max-width: 100px; /* Ajusta esto para el tamaño máximo que quieras para tus íconos */
-    height: 100%; /* Esto asegura que cada icono tenga la misma altura */
+    width: 50px; /* Tamaño reducido para dispositivos móviles */
+    height: 50px;
   }
-  
-  .icon {
-    width: 100%; /* Esto hace que los SVGs ocupen todo el espacio disponible en el icon-wrapper */
-    height: auto; /* Esto mantiene la proporción del SVG */
-    max-height: 100%; /* Asegura que el SVG no exceda la altura del icon-wrapper */
+}
+
+@media (min-width: 601px) {
+  .icon-wrapper {
+    width: 80px; /* Tamaño para dispositivos más grandes */
+    height: 80px;
   }
-  </style>
+}
+
+</style>

@@ -4,19 +4,36 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Unity from "./icons/Unity_icon.astro"
+import Csharp from "./icons/Csharp.astro"
+import Python from "./icons/Python.astro"
+import Numpy from "./icons/Numpy.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
+  UNITY: {
+    name: "Unity",
     class: "bg-black text-white",
-    icon: NextJS,
+    icon: Unity,
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
+  CSHARP: {
+    name: "C#",
     class: "bg-[#003159] text-white",
-    icon: Tailwind,
+    icon: Csharp,
+  },
+
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#003159] text-white",
+    icon: Python,
+  },
+
+  NUMPY: {
+    name: "Numpy",
+    class: "bg-[#003159] text-white",
+    icon: Numpy,
   },
 }
+
 const PROJECTS = [
   {
     title: "El Escape de Mota - Infinity Runner 2D",
@@ -25,15 +42,16 @@ const PROJECTS = [
     link: "https://jorge-holguin.itch.io/el-escape-de-mota",
     github: "https://github.com/jorge-holguin/El-Escape-de-Mota",
     image: "/projects/miniatura.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.UNITY, TAGS.CSHARP],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Utilizando el ML para jugar en la ruleta",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Modelo Predictivo de Machine Learning basado en el algoritmo Random Forest para jugar en la ruleta.",
+    link: "https://colab.research.google.com/drive/14nFE1oesKsuZU-Dj93zXzrph1wtF9PmM?usp=sharing",
+    github: "https://github.com/jorge-holguin/Ruleta_Mejorada",
+    image: "/projects/IA+RULETA.webp",
+    tags: [TAGS.PYTHON, TAGS.NUMPY],
   },
 ]
 ---
