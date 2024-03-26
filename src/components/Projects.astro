@@ -40,6 +40,7 @@ const PROJECTS = [
     description:
       "Videojuego 2D en Unity, inspirado en el dinosaurio de Google, ahora protagonizado por Mota, mi perro Schnauzer.",
     link: "https://jorge-holguin.itch.io/el-escape-de-mota",
+    youtube: "https://youtu.be/wGmkzCEr0NM",
     github: "https://github.com/jorge-holguin/El-Escape-de-Mota",
     image: "/projects/miniatura.webp",
     tags: [TAGS.UNITY, TAGS.CSHARP],
@@ -49,6 +50,7 @@ const PROJECTS = [
     description:
       "Modelo Predictivo de Machine Learning basado en el algoritmo Random Forest para jugar en la ruleta.",
     link: "https://colab.research.google.com/drive/14nFE1oesKsuZU-Dj93zXzrph1wtF9PmM?usp=sharing",
+    youtube: "https://youtu.be/HzEaKCT9KGU",
     github: "https://github.com/jorge-holguin/Ruleta_Mejorada",
     image: "/projects/IA+RULETA.webp",
     tags: [TAGS.PYTHON, TAGS.NUMPY],
@@ -58,11 +60,13 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link,youtube, github }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <a href={youtube} target="_blank" rel="noopener noreferrer">
+            <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+          </a>
     </div>
   </div>
 

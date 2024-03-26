@@ -1,7 +1,7 @@
-# 👨🏻‍💻 Porfolio para programadores y desarrolladores
+# 👨🏻‍💻 Porfolio para desarrolladores by Jorge Holguin
 
 <div align="center">
-<a href="https://porfolio.dev/">
+<a href="https://jorgeholguinc.com/">
 <img src="./public/porfolio.webp">
 </a>
 <p></p>

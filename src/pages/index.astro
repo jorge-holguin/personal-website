@@ -10,6 +10,13 @@ import Projects from "@/components/Projects.astro"
 import Stacks from "@/components/Stacks.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
+import YoutubeIcon from "@/components/icons/Youtube.astro"
+import BlogIcon from "@/components/icons/Blog.astro"
+import TiktokIcon  from "@/components/icons/Tiktok.astro"
+import FacebookIcon  from "@/components/icons/Facebook.astro"
+import InstagramIcon from "@/components/icons/Instagram.astro"
+import XIcon  from "@/components/icons/X.astro"
+import Whatsapp from "@/components/icons/Whatsapp_icon.astro"
 ---
 
 <Layout
@@ -17,11 +24,58 @@ import Hero from "@/components/Hero.astro"
   description="Contrata a Jorge Holguin para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
 >
   <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
+    <SectionContainer class="pt-16 md:pt-36">
       <Hero>
       </slot>
     </Hero>
     </SectionContainer>
+
+    <SectionContainer class="py-8 md:py-18">
+      <div class="youtube-video-container" style="position: relative; padding-bottom: 56.25%; /* 16:9 Aspect Ratio */ height: 0; overflow: hidden;">
+        <iframe
+          src="https://www.youtube.com/embed/U9OCAae9DpU?si=QUlygX3R3JrBdGlX"
+          title="YouTube video player"
+          frameborder="0"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          loading="lazy"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="flex flex-row justify-center items-center gap-4 mt-4 flex-wrap">
+        <a href="https://www.youtube.com/@vidadigital1994" target="_blank" rel="noopener noreferrer" class="btn btn-youtube flex items-center justify-center gap-2 " >
+          <YoutubeIcon class="svg" />
+          YouTube
+        </a>
+        <!-- Botón de TikTok -->
+         <a href="tiktok.com/@vidadigitalai" target="_blank" rel="noopener noreferrer" class="btn btn-tiktok flex items-center justify-center gap-2">
+          <TiktokIcon class="svg" />
+          TikTok
+        </a>
+        <!-- Botón de Facebook -->
+        <a href="facebook.com/vida.digital1994" target="_blank" rel="noopener noreferrer" class="btn btn-facebook flex items-center justify-center gap-2">
+         <FacebookIcon class="svg"/>
+           Facebook
+        </a>
+         <!-- Botón de Instagram -->
+        <a href="instagram.com/vidadigitalai" target="_blank" rel="noopener noreferrer" class="btn btn-instagram flex items-center justify-center gap-2">
+          <InstagramIcon class="svg"/>
+          Instagram
+        </a>
+        <!-- Botón de X -->
+        <a href="twitter.com/VidaDigitalIA" target="_blank" rel="noopener noreferrer" class="btn btn-x flex items-center justify-center gap-2">
+          <XIcon class="svg"/>
+          X
+        </a>
+        <a href="https://jorgeholguinc.com/blog/" target="_blank" rel="noopener noreferrer" class="btn btn-blog flex items-center justify-center gap-2">
+          <BlogIcon class="svg" />
+          Blog
+        </a>
+      </div>
+
+    </SectionContainer>
+
     <div class="space-y-24">
     <SectionContainer id="experiencia">
       <h2
@@ -64,5 +118,133 @@ import Hero from "@/components/Hero.astro"
       <AboutMe />
     </SectionContainer>
   </div>
+
+  <a href="https://wa.link/z4h76g" class="btn-wsp" target="_blank" rel="noopener noreferrer">
+    <Whatsapp />
+  </a>
+
   </main>
 </Layout>
+
+<style>
+  .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    min-width: 150px; /* Ancho mínimo para mantener los botones del mismo tamaño */
+    max-width: 180px; /* Ancho máximo para evitar que los botones se expandan demasiado en escritorio */
+    width: 100%; /* Asegura que el botón se expanda para llenar el contenedor */
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn svg, .svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .btn-youtube {
+    background-color: #FF0000;
+    color: white;
+  }
+  .btn-tiktok {
+  background-color: #000000; /* Negro TikTok */
+  color: white;
+  }
+
+.btn-facebook {
+  background-color: #4178f0; /* Azul Facebook */
+  color: white;
+  }
+
+.btn-instagram {
+  background-color: #C13584; /* Magenta Instagram */
+  color: white;
+  }
+
+.btn-x {
+  background-color: #6b6e70; /* Azul X */
+  color: white;
+  }
+
+.btn-blog {
+    background-color: #FF7F00;
+    color: white;
+ }
+
+   /* Estilo hover para btn-youtube */
+   .btn-youtube:hover {
+    background-color: #CC0000; /* Un rojo más oscuro para el hover */
+  }
+
+  /* Estilo hover para btn-tiktok */
+  .btn-tiktok:hover {
+    background-color: #e5e5e5; /* Un gris claro para el hover, ajusta según la marca TikTok */
+  }
+
+  /* Estilo hover para btn-facebook */
+  .btn-facebook:hover {
+    background-color: #7796d8; /* Un azul más oscuro para el hover */
+  }
+
+  /* Estilo hover para btn-instagram */
+  .btn-instagram:hover {
+    background-color: #eca1d4; /* Un magenta más oscuro para el hover */
+  }
+
+  /* Estilo hover para btn-x */
+  .btn-x:hover {
+    background-color: #25292b; /* Un azul más oscuro para el hover */
+  }
+
+  /* Estilo hover para btn-blog */
+  .btn-blog:hover {
+    background-color: #d3a96b; /* Un azul más oscuro para el hover */
+  }
+
+  @media (min-width: 768px) {
+    .btn {
+      font-size: 18px; /* Tamaño de fuente ligeramente más grande para escritorio */
+    }
+    .btn svg {
+      width: 30px; /* SVGs más grandes en escritorio */
+      height: 30px;
+    }
+  }
+
+  .btn-wsp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50%;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+    .btn-wsp{
+        width:63px;
+        height:63px;
+	}
+}
+</style>

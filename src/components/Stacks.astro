@@ -23,54 +23,56 @@ import Notion from './icons/Notion.astro';
 import Linux from './icons/Linux.astro';
 import Scikit from './icons/Scikit.astro';
 import Numpy from './icons/Numpy.astro';
-import Wordpress from './icons/Wordpress.astro'
+import Wordpress from './icons/Wordpress.astro';
+import Astro_icon from './icons/Astro_icon.astro';
 
 // Prepara un arreglo con los componentes de íconos específicos y sus colores de brillo
 // Prepara un arreglo con los componentes de íconos específicos y sus colores de brillo
 const categories = {
   frontEnd: [
-    { component: HTML, glowColor: 'rgba(255, 165, 0, 0.6)' },
-    { component: CSS, glowColor: 'rgba(0, 0, 255, 0.6)' },
-    { component: Tailwind, glowColor: 'rgba(56, 189, 248, 0.6)' }, // Resplandor azul para Tailwind CSS
-    { component: Javascript, glowColor: 'rgba(255, 255, 0, 0.6)' },
-    { component: React, glowColor: 'rgba(97, 218, 251, 0.6)' }, // Resplandor cian para React
+  { component: HTML, glowColor: 'rgba(255, 165, 0, 0.6)', name: 'HTML' },,
+    { component: CSS, glowColor: 'rgba(0, 0, 255, 0.6)', name: 'CSS'  },
+    { component: Tailwind, glowColor: 'rgba(56, 189, 248, 0.6)', name: 'Tailwind CSS' }, // Resplandor azul para Tailwind CSS
+    { component: Javascript, glowColor: 'rgba(225, 215, 30, 0.6)', name: 'JavaScript'},
+    { component: Astro_icon, glowColor: 'rgba(255, 165, 0, 0.6)', name: 'Astro'},
+    { component: React, glowColor: 'rgba(97, 218, 251, 0.6)', name: 'React'}, // Resplandor cian para React
     // Agrega el resto de componentes de Full Stack
   ],
 
   backEnd: [
-  { component: Node, glowColor: 'rgba(128, 128, 128, 0.6)' }, // Resplandor gris para Node.js
-  { component: Express, glowColor: 'rgba(255, 175, 180, 0.6)' }, // Resplandor verde para Express
-  { component: Nextjs, glowColor: 'rgba(155, 87, 34, 0.6)' }, // Resplandor naranja rojizo para Next.js
-  { component: Csharp, glowColor: 'rgba(104, 33, 122, 0.6)' }, // Resplandor para C#
-  { component: NET, glowColor: 'rgba(251, 231, 215, 0.6)' }, // Resplandor para .NET
+  { component: Node, glowColor: 'rgba(58, 228, 78, 0.6)', name: 'Node.js' }, // Resplandor verde para Node.js
+  { component: Express, glowColor: 'rgba(255, 175, 180, 0.6)', name: 'Express.js' }, // Resplandor verde para Express
+  { component: Nextjs, glowColor: 'rgba(155, 87, 34, 0.6)' , name: 'Next.js'}, // Resplandor naranja rojizo para Next.js
+  { component: Csharp, glowColor: 'rgba(104, 33, 122, 0.6)', name: 'C#' }, // Resplandor para C#
+  { component: NET, glowColor: 'rgba(221, 211, 195, 0.6)' , name: '.NET'}, // Resplandor para .NET
   
     // Agrega el resto de componentes de Full Stack
   ],
   baseDeDatos: [
-    { component: MySQL, glowColor: 'rgba(0, 102, 204, 0.6)' },
-    { component: MongoDB, glowColor: 'rgba(76, 175, 80, 0.6)' },
-    { component: SQLServer, glowColor: 'rgba(255, 0, 0, 0.6)' }, // Resplandor rojo para SQL Server
+    { component: MySQL, glowColor: 'rgba(0, 102, 204, 0.6)', name: 'MySQL'},
+    { component: MongoDB, glowColor: 'rgba(76, 175, 80, 0.6)', name: 'MongoDB' },
+    { component: SQLServer, glowColor: 'rgba(255, 0, 0, 0.6)', name: 'SQL Server'}, // Resplandor rojo para SQL Server
     // Agrega el resto de componentes de Base de Datos
   ],
   nube: [
-  { component: Azure, glowColor: 'rgba(0, 150, 255, 0.6)' },
+  { component: Azure, glowColor: 'rgba(0, 150, 255, 0.6)', name: 'Azure' },
     // Agrega el resto de componentes de Nube
   ],
   bigData: [
-    { component: Scala, glowColor: 'rgba(196, 0, 0, 0.6)' },
-    { component: Python, glowColor: 'rgba(215, 215, 0, 0.6)' }, // Resplandor azul para Python
-    { component: Numpy, glowColor: 'rgba(0, 180, 255, 0.6)' } // Resplandor amarillo para Numpy
+    { component: Scala, glowColor: 'rgba(196, 0, 0, 0.6)', name: 'Scala' },
+    { component: Python, glowColor: 'rgba(215, 215, 0, 0.6)', name: 'Python'}, // Resplandor azul para Python
+    { component: Numpy, glowColor: 'rgba(0, 180, 255, 0.6)' , name: 'Numpy'} // Resplandor amarillo para Numpy
 
     // Agrega más componentes de Big Data si los tienes
   ],
   
   utilitarios: [
-  { component: Notion, glowColor: 'rgba(150, 150, 150, 0.6)' }, // Resplandor naranja para Notion
-  { component: Docker, glowColor: 'rgba(0, 191, 255, 0.6)' }, // Resplandor azul claro para Docker
-  { component: Unity, glowColor: 'rgba(255, 165, 0, 0.6)' }, // Dorado
-  { component: Github, glowColor: 'rgba(150, 150, 150, 0.6)' }, // Resplandor gris oscuro para GitHub
-  { component: Linux, glowColor: 'rgba(215, 185, 50, 0.6)' }, // Dorado
-  { component: Wordpress, glowColor: 'rgba(0, 120, 215, 0.6)' } // Dorado
+  { component: Notion, glowColor: 'rgba(150, 150, 150, 0.6)' , name: 'Notion' }, // Resplandor naranja para Notion
+  { component: Docker, glowColor: 'rgba(0, 191, 255, 0.6)' , name: 'Docker' }, // Resplandor azul claro para Docker
+  { component: Unity, glowColor: 'rgba(255, 165, 0, 0.6)' , name: 'Unity'}, // Dorado
+  { component: Github, glowColor: 'rgba(150, 150, 150, 0.6)', name: 'Github' }, // Resplandor gris oscuro para GitHub
+  { component: Linux, glowColor: 'rgba(215, 185, 50, 0.6)' , name: 'Linux'}, // Dorado
+  { component: Wordpress, glowColor: 'rgba(0, 120, 215, 0.6)' , name: 'Wordpress'} // Dorado
   ],
   // Añade más categorías si es necesario
 };
@@ -79,59 +81,100 @@ const categories = {
 
 <div>
   <h2>Front-end</h2>
-  <div class="icon-row">
-    {categories.frontEnd.map((icon) => (
-      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
-        {/* Asegúrate de que el componente del ícono sea renderizado correctamente */}
-        <icon.component class="icon" />
-      </div>
-    ))}
+  <div class="flex flex-wrap justify-center">
+    {categories.frontEnd.map((icon) => {
+      if (!icon) return null; // Esto verifica que icon no sea undefined
+      return (
+        <div class="group relative m-2 flex flex-col items-center cursor-pointer">
+          <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+            <icon.component class="icon w-20 h-20" />
+          </div>
+          <!-- Tooltip -->
+          <div class="tooltip opacity-0 group-hover:opacity-100" style={`color: ${icon.glowColor};`}>
+            <span class="tooltip-text">{icon.name}</span>
+          </div>
+        </div>
+      );
+      })}
   </div>
 
   <h2>Back-end</h2>
-  <div class="icon-row">
-    {categories.backEnd.map((icon) => (
-      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
-        <icon.component class="icon" />
+  <div class="flex flex-wrap justify-center">
+    {categories.backEnd.map((icon) => {
+      if (!icon) return null; // Esto verifica que icon no sea undefined
+      return (
+      <div class="group relative m-2 flex flex-col items-center cursor-pointer">
+        <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+          <icon.component class="icon w-20 h-20" />
+        </div>
+        <!-- Tooltip -->
+        <div class="tooltip opacity-0 group-hover:opacity-100" style={`color: ${icon.glowColor};`}>
+          <span class="tooltip-text">{icon.name}</span>
+        </div>
       </div>
-    ))}
-  </div>
+      );
+    })}
+</div>
 
   <h2>Base de Datos</h2>
-  <div class="icon-row">
+  <div class="flex flex-wrap justify-center">
     {categories.baseDeDatos.map((icon) => (
-      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
-        <icon.component class="icon" />
+      <div class="group relative m-2 flex flex-col items-center cursor-pointer">
+        <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+          <icon.component class="icon w-20 h-20" />
+        </div>
+        <!-- Tooltip -->
+        <div class="tooltip opacity-0 group-hover:opacity-100" style={`color: ${icon.glowColor};`}>
+          <span class="tooltip-text">{icon.name}</span>
+        </div>
       </div>
     ))}
-  </div>
+</div>
 
   <h2>Big Data</h2>
-  <div class="icon-row">
+  <div class="flex flex-wrap justify-center">
     {categories.bigData.map((icon) => (
-      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
-        <icon.component class="icon" />
+      <div class="group relative m-2 flex flex-col items-center cursor-pointer">
+        <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+          <icon.component class="icon w-20 h-20" />
+        </div>
+        <!-- Tooltip -->
+        <div class="tooltip opacity-0 group-hover:opacity-100" style={`color: ${icon.glowColor};`}>
+          <span class="tooltip-text">{icon.name}</span>
+        </div>
       </div>
     ))}
-  </div>
+</div>
 
   <h2>Nube</h2>
-  <div class="icon-row">
+  <div class="flex flex-wrap justify-center">
     {categories.nube.map((icon) => (
-      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
-        <icon.component class="icon" />
+      <div class="group relative m-2 flex flex-col items-center cursor-pointer">
+        <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+          <icon.component class="icon w-20 h-20" />
+        </div>
+        <!-- Tooltip -->
+        <div class="tooltip opacity-0 group-hover:opacity-100" style={`color: ${icon.glowColor};`}>
+          <span class="tooltip-text">{icon.name}</span>
+        </div>
       </div>
     ))}
-  </div>
+</div>
 
   <h2>Utilitarios</h2>
-  <div class="icon-row">
+  <div class="flex flex-wrap justify-center">
     {categories.utilitarios.map((icon) => (
-      <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
-        <icon.component class="icon" />
+      <div class="group relative m-2 flex flex-col items-center cursor-pointer">
+        <div class="icon-wrapper" style={`filter: drop-shadow(0 0 20px ${icon.glowColor});`}>
+          <icon.component class="icon w-20 h-20" />
+        </div>
+        <!-- Tooltip -->
+        <div class="tooltip opacity-0 group-hover:opacity-100" style={`color: ${icon.glowColor};`}>
+          <span class="tooltip-text">{icon.name}</span>
+        </div>
       </div>
     ))}
-  </div>
+</div>
 
 <style>
 .icon-row {
@@ -155,6 +198,24 @@ const categories = {
   object-fit: contain; /* Mantiene la proporción del ícono */
 }
 
+.tooltip {
+    position: absolute;
+    bottom: full;
+    left: 50%;
+    transform: translate(-50%, -2rem);
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0); /* Fondo semi-transparente */
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+  }
+
+  .tooltip-text {
+    color: inherit; /* El color se hereda del elemento padre .tooltip */
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    text-shadow: 0 0 10px currentColor; /* Efecto de resplandor que utiliza el color actual */
+  }
 
 /* Media query para pantallas más pequeñas, como teléfonos móviles */
 @media (max-width: 600px) {
